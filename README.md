@@ -12,14 +12,12 @@ A robust and secure user management system built with Spring Boot, featuring JWT
 
 - **Profile Management**
   - View and update user profile
-  - Change email with verification
-  - Change password with current password verification
-  - Profile image upload functionality
+  - Change parameters with current password verification
+    
 
 - **Device Management**
   - Track active devices
   - Logout from specific devices
-  - Logout from all devices except current one
 
 ## Technical Stack
 
@@ -68,7 +66,7 @@ A Postman collection is included in the repository (`User-Management-System.post
    - H2 Console: `http://localhost:8080/h2-console`
      - JDBC URL: `jdbc:h2:mem:testdb`
      - Username: `sa`
-     - Password: (leave blank)
+     - Password: `password` (in a real case sceario this would not be in the readme file, rather in the config file)
 
 ## API Endpoints
 
@@ -80,7 +78,6 @@ A Postman collection is included in the repository (`User-Management-System.post
 ### Profile Management
 - GET `/api/v1/profile` - Get user profile
 - PUT `/api/v1/profile` - Update profile
-- POST `/api/v1/profile/image` - Update profile image
 
 ### Device Management
 - GET `/api/v1/devices` - List active devices
@@ -119,3 +116,5 @@ src/main/java/com/example/usermanagementsystem/
 ├── security/       # Security configurations
 └── service/        # Business logic
 ```
+**NOTE**
+Since in the task document some of the features were crossed out, they are not mentioned in the readme, but there is some implementation in the code related to them.
